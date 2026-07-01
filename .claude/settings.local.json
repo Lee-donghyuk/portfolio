@@ -2,7 +2,20 @@
   "permissions": {
     "allow": [
       "Bash(gh repo *)",
-      "PowerShell"
+      "PowerShell",
+      "Bash(git -C \"C:\\\\Users\\\\tbvje\\\\portfolio-PM\" diff -- index.html)",
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git fetch *)",
+      "Bash(git rev-list *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git push *)",
+      "Bash(gh api *)",
+      "Bash(curl *)",
+      "Bash(wc -l /tmp_check_page.html)",
+      "Bash(head -c 500 /tmp_check_page.html)",
+      "Bash(grep -o \"<title>.*</title>\" /tmp_check_page.html)"
     ]
   },
   "outputStyle": "beignner Developer"

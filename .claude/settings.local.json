@@ -15,7 +15,8 @@
       "Bash(curl *)",
       "Bash(wc -l /tmp_check_page.html)",
       "Bash(head -c 500 /tmp_check_page.html)",
-      "Bash(grep -o \"<title>.*</title>\" /tmp_check_page.html)"
+      "Bash(grep -o \"<title>.*</title>\" /tmp_check_page.html)",
+      "Bash(git commit --allow-empty -m ' *)"
     ]
   },
   "outputStyle": "beignner Developer"

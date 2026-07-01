@@ -368,18 +368,24 @@
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 2rem 2.25rem;
     width: min(600px, 92vw);
     max-height: min(82vh, 820px);
-    overflow-y: auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume-modal-body {
+    padding: 2rem 2.25rem;
+    overflow-y: auto;
+    min-height: 0;
   }
 
   .modal-close {
     position: absolute;
     top: 1rem;
     right: 1.1rem;
-    background: none;
+    background: var(--bg);
     border: none;
     font-size: 1.1rem;
     cursor: pointer;
@@ -387,6 +393,8 @@
     line-height: 1;
     padding: 4px 6px;
     border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    z-index: 10;
   }
 
   .modal-close:hover { background: var(--surface); color: var(--text-primary); }
@@ -498,9 +506,10 @@
 <div id="resume-overlay" class="resume-overlay">
   <div class="resume-modal">
     <button class="modal-close" id="modal-close" aria-label="닫기">✕</button>
+    <div class="resume-modal-body">
 
     <div class="resume-modal-name">이동혁</div>
-    <div class="resume-modal-sub">donghyuk0322@gmail.com &nbsp;·&nbsp; github.com/Lee-donghyuk</div>
+    <div class="resume-modal-sub">donghyuk0322@gmail.com </div>
 
     <div class="resume-section-title">학력사항</div>
     <table class="resume-table">
@@ -513,7 +522,7 @@
       </tr>
       <tr>
         <td class="resume-period">2015.02 – 2018.02</td>
-        <td>서울대진고등학교 &nbsp;·&nbsp; 졸업</td>
+        <td>서울대진고등학교 </td>
       </tr>
     </table>
 
@@ -523,7 +532,14 @@
         <td class="resume-period">2025.12 – 2026.02</td>
         <td>
           <span class="resume-org">하이퍼스타㈜</span> &nbsp;·&nbsp; 인턴<br>
-          <span class="resume-sub">경영지원부 — 마케팅 및 플랫폼 QA &nbsp;·&nbsp; 계약 만료</span>
+          <span class="resume-sub">경영지원 및 마케팅</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="resume-period">2018.05 – 2019.12</td>
+        <td>
+          <span class="resume-org">WoW 피시방(450석)</span>, 파트타이머<br>
+          <div class="resume-detail">업무 메뉴얼, 체크리스트 문서 작성, 신입 교육 담당<br><strong>성과<br>- 담당 전 4명 중 3명 퇴사 → 담당 후 5명 중 1명 퇴사<br>- 타 지점 스카우트 및 보너스 지급</strong></div>
         </td>
       </tr>
     </table>
@@ -531,56 +547,74 @@
     <div class="resume-section-title">업무 / 프로젝트 경험</div>
     <table class="resume-table">
       <tr>
+        <td class="resume-period">2025.12 – 2026.01</td>
+        <td>
+          <span class="resume-org">정부 지원 사업 사업계획서 작성</span> (하이퍼스타)<br>
+          <div class="resume-detail">대표와 개발팀 미팅 기반 사업 방향성과 기술 파악 후 사업계획서 작성<br><strong>성과: 정부 지원 사업 1차 심사 통과 (사업 규모 약 6,000만원)</strong></div>
+        </td>
+      </tr>
+      <tr>
         <td class="resume-period">2026.01 – 2026.02</td>
         <td>
           <span class="resume-org">TIPS Global Track 사업</span> (하이퍼스타)<br>
-          <div class="resume-detail">외주사 커뮤니케이션 — 문서 체계 구축, 협업 관리, 증빙 자료 수집<br>성과: 3개월치 비용 처리 완료 및 사내 문서 자산화</div>
+          <div class="resume-detail">외주사 커뮤니케이션 — 문서 체계 구축, 협업 관리, 증빙 자료 수집<br><strong>성과: 3개월치 비용 처리 완료 및 사내 문서 자산화</strong></div>
         </td>
       </tr>
       <tr>
         <td class="resume-period">2026.01 – 2026.02</td>
         <td>
           <span class="resume-org">ShopBack UGC 캠페인</span> (하이퍼스타 × Partipost)<br>
-          <div class="resume-detail">크리에이터 소싱·커뮤니케이션·일정 관리<br>성과: 10건 납기일 내 납품 100% 완수 / 2차 캠페인 연결</div>
+          <div class="resume-detail">크리에이터 소싱, 커뮤니케이션, 일정 관리<br><strong>성과: 10건 납기일 내 납품 100% 완수 / 2차 캠페인 연결</strong></div>
         </td>
       </tr>
     </table>
 
-    <div class="resume-section-title">기타 활동 및 교육</div>
+    <div class="resume-section-title">교육 이수</div>
     <table class="resume-table">
       <tr>
         <td class="resume-period">2026.03 – 2026.04</td>
         <td>
           <span class="resume-org">PMP 교육 수료</span> (CasePM)<br>
-          <div class="resume-detail">5가지 프로세스 영역 / 10가지 핵심 지식 영역 교육</div>
+          <div class="resume-detail">5가지 프로세스 영역(착수 - 계획 - 실행 - 감시 및 통제 - 종료) <br> 10가지 지식 영역 교육</div>
         </td>
       </tr>
       <tr>
         <td class="resume-period">2026.03.09 – 03.13</td>
         <td>
           <span class="resume-org">AI Fluency: Framework &amp; Foundations</span> 수료 (Anthropic)<br>
-          <div class="resume-detail">위임·설명·분별력·책임성 4가지 AI 활용 역량 교육</div>
+          <div class="resume-detail">위임, 설명, 분별력, 책임성 4가지 AI 활용 역량 교육</div>
         </td>
       </tr>
+    </table>
+
+    <div class="resume-section-title">기타 활동</div>
+    <table class="resume-table">
       <tr>
         <td class="resume-period">2025.11.07 – 11.14</td>
         <td>
-          <span class="resume-org">업스테이지 &amp; 강원대 n8n 해커톤</span> — 팀장<br>
-          <div class="resume-detail">LLM 기반 회의 음성→텍스트 변환·일정 공유·메일 발송 파이프라인 개발</div>
+          <span class="resume-org">업스테이지 &amp; 강원대 n8n 해커톤</span> - 팀장<br>
+          <div class="resume-detail">LLM 기반 회의 음성→텍스트 변환→일정 공유 메일 발송 파이프라인 개발</div>
         </td>
       </tr>
       <tr>
         <td class="resume-period">2025.03 – 2025.06</td>
         <td>
           <span class="resume-org">교내 캡스톤 디자인</span> (강원대)<br>
-          <div class="resume-detail">AI 활용 여행 계획 최적화 웹 앱 — 다익스트라 최단 경로 구현</div>
+          <div class="resume-detail">AI 활용 여행 계획 최적화 웹 앱 - 다익스트라 최단 경로 구현</div>
         </td>
       </tr>
       <tr>
-        <td class="resume-period">2018.05 – 2019.12</td>
+        <td class="resume-period">2020.10 – 2020.11</td>
         <td>
-          <span class="resume-org">WoW 피시방(450석)</span> 파트타이머<br>
-          <div class="resume-detail">업무 표준화 및 신입 교육 체계 구축 → 이탈률 75% → 20% 감소 / 타 지점 스카우트</div>
+          <span class="resume-org">서울특별시 드론 활용 아이디어 경진대회</span> 참가<br>
+          <div class="resume-detail">LiDAR 센서 기반 3D 가상공간 동선 예측 프로그램 기획 - COVID-19 감염 경로를 3D 로드뷰로 구현해 공중보건 향상 도모</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="resume-period">2018.03 – 2018.06</td>
+        <td>
+          <span class="resume-org">코딩 알고리즘 스터디 동아리</span> (강원대) - 멘티<br>
+          <div class="resume-detail">멘토(3, 4학년)와 수업 시간 외 단체 스터디 그룹 참여</div>
         </td>
       </tr>
     </table>
@@ -605,20 +639,21 @@
     <div class="resume-skills-grid">
       <div class="resume-skill-row">
         <span class="resume-skill-label">문서 관리</span>
-        <span>MS Office, Notion, Confluence <span class="resume-sub">(중상)</span></span>
+        <span>MS Office, Notion, Confluence <span class="resume-sub"></span></span>
       </div>
       <div class="resume-skill-row">
         <span class="resume-skill-label">협업 / 형상관리</span>
-        <span>JIRA, Slack, Trello, Redmine, Git/Github <span class="resume-sub">(중상)</span></span>
+        <span>JIRA, Slack, Trello, Redmine, Git/Github <span class="resume-sub"></span></span>
       </div>
       <div class="resume-skill-row">
         <span class="resume-skill-label">개발 언어</span>
-        <span>C, JAVA, JS, SQL, HTML, CSS <span class="resume-sub">(중상)</span></span>
+        <span>C, JAVA, JS, SQL, HTML, CSS <span class="resume-sub"></span></span>
       </div>
       <div class="resume-skill-row">
         <span class="resume-skill-label">게임 / 자동화</span>
-        <span>Unity, n8n <span class="resume-sub">(중하)</span></span>
+        <span>Unity, n8n <span class="resume-sub"></span></span>
       </div>
+    </div>
     </div>
   </div>
 </div>
